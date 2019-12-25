@@ -1,0 +1,26 @@
+{
+  "name": "image-url-preview",
+  "version": "0.0.1",
+  "description": "Show preview of image URLs contained in some text",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Petr Messner",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/messa/image-url-preview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/messa/image-url-preview/issues"
+  },
+  "homepage": "https://github.com/messa/image-url-preview#readme"
+}
