@@ -18,6 +18,7 @@ function Editor({ value, onChange }) {
           flex: 1;
           font-size: 14px;
           font-family: 'Roboto Mono', monospace;
+          resize: none;
         }
       `}</style>
     </form>
