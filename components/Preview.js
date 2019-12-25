@@ -5,19 +5,20 @@ const imageUrlRegex = /https?:[/][/][a-zA-Z0-9/._-]+/g
 function Preview({ text }) {
   const textLines = text.split('\n')
   const lines = []
+  let keyValue = 0
   for (const line of textLines) {
     if (line.length === 0) {
       // empty line would otherwise have zero height
-      lines.push(<div className='line'>&nbsp;</div>)
+      lines.push(<div className='line' key={keyValue++}>&nbsp;</div>)
       continue;
     }
-    lines.push(<div className='line'>{line}</div>)
+    lines.push(<div className='line' key={keyValue++}>{line}</div>)
     const urls = line.match(imageUrlRegex)
     if (urls) {
       //lines.push(<pre>{JSON.stringify(urls)}</pre>)
       for (const url of urls) {
         lines.push(
-          <div className='imagePreview'>
+          <div className='imagePreview' key={keyValue++}>
             <b><a href={url} target='_blank'>{url}</a></b><br />
             <img src={url} className='preview' />
           </div>
